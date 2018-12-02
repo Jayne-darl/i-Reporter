@@ -64,3 +64,33 @@ var passwordMatch = function passwordMatch() {
         signupBtn.disabled = false;
     }
 }
+
+// ACCEPT-ANSWER TOGGLE
+const showDeleted = (input) => {
+    const index = parseInt(input);
+    const deleted = document.getElementsByClassName('deleted');
+    const editBtn = document.getElementsByClassName('edit');
+    const deleteBtns = document.getElementsByClassName('delete');
+
+    editBtn[index].style.display = 'none';
+    deleted[index].style.display = 'inline';
+
+    for (let i = 0; i <= deleteBtns.length - 1; i++) {
+        deleteBtns[i].style.display = 'none';
+    }
+};
+
+
+const showDeleteBtn = (input) => {
+    const index = parseInt(input);
+    const deleted = document.getElementsByClassName('deleted');
+    const editBtn = document.getElementsByClassName('edit');
+    const deleteBtns = document.getElementsByClassName('delete');
+
+    editBtn[index].style.display = 'none';
+    deleted[index].style.display = 'none';
+
+    for (let i = 0; i <= deleteBtns.length - 1; i++) {
+        deleteBtns[i].style.display = 'inline';
+    }
+};
