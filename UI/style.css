@@ -113,10 +113,14 @@ border: none;
     margin:0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.report-desc{
+.insight, .report-desc{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     line-height: 20px;
+}
+.insight{
+    line-height: 30px;
+    
 }
  form input[type=checkbox]{
     float: left;
@@ -170,8 +174,8 @@ a{
     color: white;
     font-size: 20px;
 }
-.topnav a:hover{
-    background-color: #111;
+.sidenav li:hover, .topnav a:hover{
+    background-color: rgb(59, 53, 53);
     border-radius: 6px;
 }
 .welcome{
@@ -180,7 +184,42 @@ a{
 }
 .right{
     float: right;
+}
+.status-dropdown{
+    margin-left: 130px;
+    margin-top:0;
 } 
+.sidenav{
+    min-height: 100%; 
+    top:-122px; 
+     width: 18%;
+    position:relative;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color:	 #d194a5;
+    overflow-x: hidden;
+    padding-top: 10px;
+    border-right: 2px solid #f0dbe1;
+    }
+.sidenav ul a {
+        text-align: left;
+        padding: 0;
+        padding-bottom: 10px;
+        color:white;
+        font-size: 25px;
+        
+    }
+.sidenav ul{
+        padding:0px 5px 15px 5px;
+    }
+.sidenav li{
+        padding-left: 10px;
+        list-style: none;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        
+    } 
 
 footer{
     background-color: #C06C84;
@@ -237,6 +276,9 @@ footer p{
     .login{
         padding-top: 30px;
         margin: 100px 20px 50px 10px;
+    }
+    .sidenav li{
+        margin-right: 10px;
     }
 }
 
