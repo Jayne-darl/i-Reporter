@@ -1,0 +1,61 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>All Report Page</title>
+    <meta description="iReporter, Andela Challenge" />
+    <meta keywords="iReporter, report, intervention, redflag" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="container">
+                <h1 class="dashboard-logo"><img src="./images/iReporter-logo.png" alt="Logo" id=""> </h1>
+                <a class="logout" href="login.html"><b>Log Out</b></a>
+            </div>
+            <div>
+                <div class="col-4 sd-col-12 topnav">
+                    <a href="userdashboard.html">Home</a></div>
+                <div class="col-4 sd-col-12 topnav">
+                    <a class="current" href="allreports.html">All Report</a></div>
+                <div class="col-4 sd-col-12 topnav">
+                    <select name=" Status" class="status-dropdown" required>
+                        <option value="new" selected disabled>Report Type</option>
+                        <option value="new">Red Flag</option><br>
+                        <option value="under investigation">Intervention</option><br>
+                    </select>
+                </div>
+            </div>
+    </header>
+
+    <div class="sidenav col-3 sd-col-4">
+        <ul>
+            </li>
+            <li><a href="#all">All Report</a></li>
+            <li><a href="#resolved">Resolved Report</a></li>
+            <li><a href="#rejected">Rejected Report</a></li>
+            <li><a href="#under investigation">Under Investigation Report</a></li>
+        </ul>
+    </div>
+    <div class="insight col-8 sd-col-8">
+        <p>We have received a number of report from other individuals from different part of Africa. The list of
+            each
+            report and the status in addtion to other information regarding these reports can be viewed by clicking
+            the
+            side bar</p>
+    </div>
+    <div class="col-1"></div>
+    <footer>
+        <p>copyright &copy; Andela Challenge 2018</p>
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
