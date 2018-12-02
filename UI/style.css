@@ -5,7 +5,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    margin: 10px 10px 0 0;
+    margin: 0;
     background-color: rgb(242, 247, 246);
     font: 15em;
     min-width: 450px;
@@ -66,11 +66,11 @@ header .logo{
 .main span{
     font-weight: 900;
 }
-.logout, input[type=submit]{
+input[type=submit]{
     float: right;
     clear: left;
 }
-#submit-btn,.logout,input[type=submit],input[type=submits]{
+input[type=submit]{
     margin: 4px 2px 20px 2px;
     background-color:#355C7D;
     color: white;
@@ -84,11 +84,12 @@ form input[type=checkbox]{
     float: left;
     
 }
-form{
-    background-color:#C06C84;
+.auth-form {
+    background-color:#f0dbe1;
     padding: 20px 20px;
     margin: 0 0;
-    border:2px solid #F67280;
+    border:2px solid #f0dbe1;
+    border-radius: 5px;
 }
 input[type=datetime],.status-dropdown,input[type=text],input[type=text], input[type=password], input[type=email], input[type=number] {
     padding: 12px 20px;
@@ -101,6 +102,9 @@ input[type=datetime],.status-dropdown,input[type=text],input[type=text], input[t
 input[type=text], input[type=password], input[type=email], input[type=number]{
     width: 100%;
 }
+input[type=submit]:hover{
+    background-color:#62ABE8; 
+}
 
 .btn-primary{
    margin-bottom: 20px 
@@ -109,8 +113,13 @@ a{
     text-decoration: none;
     font-weight: 900px;
 }
+.login{
+    padding-top: 30px;
+    margin: 20px 0 30px 0;
+}
+
 footer{
-    background-color: #F67280;
+    background-color: #C06C84;
     clear: both;
   	position: relative;
 	bottom: 0px;
@@ -124,6 +133,7 @@ footer p{
     padding: 0px;
     text-align: center;
 }
+
 .sd-col-1 {width: 8.33%;}
 .sd-col-2 {width: 16.66%;}
 .sd-col-3 {width: 25%;}
@@ -159,6 +169,10 @@ footer p{
     }
     .main span{
         font-weight: 900;
+    }
+    .login{
+        padding-top: 30px;
+        margin: 100px 20px 50px 10px;
     }
 }
 
