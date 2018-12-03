@@ -1,0 +1,36 @@
+{
+  "name": "i-reporter",
+  "version": "1.0.0",
+  "description": "Api Endpoints for iReporter",
+  "main": "app.js",
+  "scripts": {
+    "eslint-app": "./node_modules/.bin/eslint --fix app.js data server",
+    "eslint-test": "./node_modules/.bin/eslint --fix test config.js .eslintrc.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jayne-darl/i-Reporter.git"
+  },
+  "author": "Jane Onwumere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jayne-darl/i-Reporter/issues"
+  },
+  "homepage": "https://github.com/Jayne-darl/i-Reporter#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7"
+  }
+}
