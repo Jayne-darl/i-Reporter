@@ -98,20 +98,23 @@ border-radius: 4px;
 }
 .btn{
     padding: 5px;
-margin: 4px 2px 20px 2px;
-background-color:#355C7D;
-color: white;
-border-radius: 6px;
-cursor: pointer;
-border: none;
+    margin: 4px 2px 20px 2px;
+    background-color:#355C7D;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
 
 }
 .edit-btn{
     color: white;
 }
-.report-type{
+.label,.report-type{
     margin:0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.label{
+    font-size: 20px;
 }
 .insight, .report-desc{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -122,9 +125,14 @@ border: none;
     line-height: 30px;
     
 }
- form input[type=checkbox]{
+  .addreport-desc input[type=submit],form input[type=checkbox]{
     float: left;
     
+}
+.addreport-desc input[type=submit]{
+    padding:10px 40px;
+    margin-top: 30px;
+
 }
 .auth-form {
     background-color:#f0dbe1;
@@ -133,13 +141,16 @@ border: none;
     border:2px solid #f0dbe1;
     border-radius: 5px;
 }
-input[type=datetime],.status-dropdown,input[type=text],input[type=text], input[type=password], input[type=email], input[type=number] {
+.addreport-dropdown,input[type=datetime],.status-dropdown,input[type=text],input[type=text], input[type=password], input[type=email], input[type=number] {
     padding: 12px 20px;
     margin: 0 0 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
+}
+.addreport-desc input[type=text]{
+    width: 50%;
 }
 input[type=text], input[type=password], input[type=email], input[type=number]{
     width: 100%;
@@ -203,23 +214,61 @@ a{
     border-right: 2px solid #f0dbe1;
     }
 .sidenav ul a {
-        text-align: left;
-        padding: 0;
-        padding-bottom: 10px;
-        color:white;
-        font-size: 25px;
-        
-    }
+    text-align: left;
+    padding: 0;
+    padding-bottom: 10px;
+    color:white;
+    font-size: 25px;
+    
+}
 .sidenav ul{
-        padding:0px 5px 15px 5px;
-    }
+    padding:0px 5px 15px 5px;
+}
 .sidenav li{
-        padding-left: 10px;
-        list-style: none;
-        margin-bottom: 20px;
-        margin-right: 50px;
-        
-    } 
+    padding-left: 10px;
+    list-style: none;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    
+} 
+.Most-Recent-Reports{
+    min-height: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    border: 1px solid gray;
+    /* box-sizing: inherit; */
+}
+.date{
+    padding-left:70px; 
+    padding-top: 0;
+    
+} 
+ input[type=file]{
+    padding-top: 0;
+    margin: 0 0 8px;
+    border-radius: 4px;
+    font-size: 18px;
+    }
+.Most-Recent-Reports p{
+    color: cornflowerblue;            font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 30px;
+}  
+
+ #attachment{
+     margin-bottom: 0;
+     /* font-size: 20px; */
+ }
+ .addreport-desc{
+     padding:0px 15px; 
+ }
+ .addreport-desc p{
+     font-weight: 400px;
+     font-size: 23px;
+     line-height: 35px;
+     font-family: 'Times New Roman', Times, serif;
+ } 
 
 footer{
     background-color: #C06C84;
@@ -281,255 +330,3 @@ footer p{
         margin-right: 10px;
     }
 }
-
-
- 
-
-
-/*
-
-nav .list1 li{
-    float: left;
-}
-nav ul .current{
-    background-color: #355C7D;
-    color: white
-}
-nav .list2 li{
-    float: right;
-}
-nav .list2 li a{
-    display: block;
-    padding: 5px 25px;
-}
-li{
-    list-style: none;
-}
-li a{
-    display: block;
-    padding: 5px 60px;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-}
-li a:hover{
-    background-color: #111;
-}
-.sidenav{
-height: 100%;
-/* top:-122px; */
-/* width: 18%;
-position:relative;
-z-index:1;
-top:0;
-left:0;
-background-color: #C06C84;
-overflow-x: hidden;
-padding-top: 10px;
-float: left;
-border-right: 1px solid #F67280;
-}
-.sidenav a {
-    text-align: left;
-    padding: 0;
-    padding-bottom: 10px
-}
-.sidenav ul{
-    padding:0px 5px 15px 5px;
-}
-.sidenav li{
-    padding-left: 10px;
-    
-}
-a{
-    text-decoration: none;
-    font-weight: 900px;
-}
-/* welcome message */
-/* .welcome{
-    padding: 10px 0 10px 20px;
-} */
-
-/* table */
-/* .table{
-    clear: both;
-    height: 100%;
-}
-table{
-    width: 100%;
-} */
-/* main */
-/* .insight{
-    
-    float: right;
-    width: 80%;
-    height: 80%;
-
-}
-
-section .main{
-    float: left;
-    width: 50%;
-}
-.main p{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 35px;
-    line-height: 55px; 
-    padding: 100px 0px 0px 10px;
-    text-align: center;
-}
-section .main span{
-    font-weight: 900;
-}
-
-aside .container, aside .containers{
-    float: right;
-    width: 45%;
-    padding: 5px 10px 0 10px;   
-}
-aside .containers{
-  margin-top: 130px;    
- }
-
-aside .container form{
-    margin: 0 0 20 0px;
-}
-aside .container .signUp-m{
-    margin-bottom: 25px;
-}
-
-.clear-fix{
-    display: table;
-    content: " ";
-  }
-  
-  .status{
-      float: right
-  }  */
-  
-
-/* form */
-/* .form{
-    background-color:#C06C84;
-    padding: 30px 50px 20px 70px;
-    margin:0px 20px 0 0;
-    border:2px solid #F67280;
-}
-.label,.sidenav.reportType,.form label{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-}
-.sidenav ul .reportType{
-    font-size: 25px;
-}
-input[type=datetime],.status-dropdown,input[type=text],.form input[type=text], input[type=password], input[type=email], input[type=number] {
-    padding: 12px 20px;
-    margin: 0 0 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-.form input[type=text], input[type=password], input[type=email], input[type=number]{
-    width: 100%;
-} */
-/* .form input[type=checkbox]{
-    float: left;
-} */
-
-/* submit button and class submit */
-/* #submit-btn,.submit{
-box-align: center;
-width: 30%;
-margin-top: 20px;
-padding:10px 0;
-}
-
-.form #login-btn{
-    box-align: center;
-    width: 30%;
-    float:right;
-    padding: 10px;
-    text-align: center;
-}
-.form .username{
-    margin-top: 15px;
-}
-
-.logout:hover, #submit-btn:hover,.form input[type=submit]:hover,.form input[type=submits]:hover{
-    background-color:#62ABE8; 
-}
-
-/* footer */
-
-
-
-/* .container{ */
-    /* float: left;
-    width: 68%;
-    padding-left: 20px;
-
-}
-.report{
-    border-bottom: 2px solid gray;
-}
-.person-reporting{
-    margin-top:3px; 
-    float: left;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.location{
-    border-right: 1px solid gray;
-}
-.status{
-    float:right;
-    padding-top: 10px;
- }
- .status-dropdown{
-     margin-top: 3px;
- }
- .Most-Recent-Reports{
-     float: right;
-     width: 25%;
-     height: 100%;
-     padding: 20px;
-     margin: 5px;
-     margin-bottom: 0;
-     border: 2px solid gray;
-     box-sizing: inherit;
- }
- .logout{
-    margin: 10px 20px;
- }
- h2{
-    font-weight: 800px;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 0px   
- }
- #attachment{ */
-     /* margin-bottom: 0;  */ 
-     /* font-size: 20px; */
- /* } */
- /* p{
-     font-weight: 400px;
-     font-size: 20px;
-     line-height: 30px;
- }
- .Most-Recent-Reports p{
-    color: cornflowerblue;
-    font-size: 18px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- } */
- 
- /* .date{
-     float: right;
-     padding-top: 0;
- } */
- /* input[type=file]{
-     padding-top: 0;
-    margin: 0 0 8px;
-    border-radius: 4px;
-    font-size: 18px;
- } */
