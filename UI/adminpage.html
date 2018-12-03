@@ -1,0 +1,133 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User Dashboard</title>
+    <meta description="iReporter, Andela Challenge" />
+    <meta keywords="iReporter, report, intervention, redflag" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="container">
+                <h1 class="dashboard-logo"><img src="./images/iReporter-logo.png" alt="Logo"></h1>
+
+                <a class="logout" href="login.html" id="logout-btn"><b>Log Out</b></a>
+            </div>
+
+            <div class="col-4 sd-col-12 topnav">
+                <a class="current" href="userdashboard.html">Home</a></div>
+            <div class="col-4 sd-col-12 topnav">
+                <a href="allreports.html">All Report</a></div>
+        </div>
+    </header>
+
+    <h2 class="welcome">Welcome <span>name</span>!</h2>
+    <div class="col-1 sd-col-12"></div>
+    <div class="sd-margin-12 col-margin-11">
+        <div class="row-container">
+            <div class="report">
+                <h1 class="report-type">Red Flag</h1>
+                <select name=" Status" class="status-dropdown report-status" required>
+                    <option value="new" selected disabled>Status</option>
+                    <option value="resolved">Resolved</option><br>
+                    <option value="rejected">Rejected</option><br>
+                    <option value="under investigation">Under investigation</option><br>
+                </select>
+
+                <p class="report-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div>
+                <div>
+                    <h4>
+                        Nigeria
+                        <br>
+                        <small><span> 25 Oct 2018</span></small>
+                    </h4>
+
+                    <div class="status-changed right " hidden>Deleted</div>
+                    <button class="btn delete right" value="0" onclick="showDeleted(this.value)">Change Status</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-1 sd-col-12"></div>
+    <div class="sd-margin-12 col-margin-11">
+        <div class="row-container">
+            <div class="report">
+                <h1 class="report-type">Red Flag</h1>
+                <select name=" Status" class="status-dropdown report-status" required>
+                    <option value="new" selected disabled>Status</option>
+                    <option value="resolved">Resolved</option><br>
+                    <option value="rejected">Rejected</option><br>
+                    <option value="under investigation">Under investigation</option><br>
+                </select>
+                <p class="report-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div>
+                <div>
+                    <h4>
+                        Nigeria
+                        <br>
+                        <small><span>12 Oct 2018</span></small>
+                    </h4>
+
+                    <div class="status-changed right " hidden>Deleted</div>
+                    <button class="btn delete right" value="0" onclick="showDeleted(this.value)">Change Status</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-1 sd-col-12"></div>
+    <div class="sd-margin-12 col-margin-11">
+        <div class="row-container">
+            <div class="report">
+                <h1 class="report-type">Intervention</h1>
+                <select name=" Status" class="status-dropdown report-status" required>
+                    <option value="new" selected disabled>Status</option>
+                    <option value="resolved">Resolved</option><br>
+                    <option value="rejected">Rejected</option><br>
+                    <option value="under investigation">Under investigation</option><br>
+                </select>
+                <p class="report-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div>
+                <div>
+                    <h4>
+                        Ghana
+                        <br>
+                        <small><span>8 Nov 2018</span></small>
+                    </h4>
+
+                    <div class="status-changed right " hidden>Deleted</div>
+                    <button class="btn delete right" value="0" onclick="showDeleted(this.value)">Change Status</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>copyright &copy; Andela Challenge 2018</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
