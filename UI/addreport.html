@@ -1,0 +1,90 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Report Page</title>
+    <meta description="iReporter, Andela Challenge" />
+    <meta keywords="iReporter, report, intervention, redflag" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="container">
+                <h1 class="dashboard-logo"><img src="./images/iReporter-logo.png" alt="Logo"></h1>
+                <a class="logout" href="login.html"><b>Log Out</b></a>
+            </div>
+
+            <div class="col-4 sd-col-12 topnav">
+                <a href="userdashboard.html">Home</a></div>
+            <div class="col-4 sd-col-12 topnav">
+                <a class="current" href="addreport.html">Add Report</a></div>
+            <div class="col-4 sd-col-12 topnav">
+                <a href="allreports.html">All Report</a></div>
+        </div>
+    </header>
+    <div>
+        <div class="col-8 sd-col-12 addreport-desc">
+            <article>
+                <p>Please add a report as correctly as possible with images or video to support your claim if possible.
+                    A
+                    <b>red
+                        flag</b> refers an incident linked to corruption while an <b>intervention</b> is a call for
+                    government
+                    agency to intervene with respect to bad or detoriated infrastructure.</p>
+            </article>
+
+            <div>
+                <label class="label" for="report type"><b>Report Type</b></label>
+                <select class="addreport-dropdown" name="Report Type" required>
+                    <option value="red flag" selected>Red flag</option><br>
+                    <option value="intervention">Intervention</option><br>
+                </select><br><br>
+            </div>
+            <div class="date">
+                <label class="label" for="date"><b>Date</b></label>
+                <input type="datetime" placeholder="Enter date" required>
+            </div>
+            <div class="location">
+                <label class="label" for="geolocation"><b>Geolocation</b></label>
+                <input name="geolocation" type="text" placeholder="Geolocation Cordinates" required><br>
+            </div>
+            <div>
+                <label for="report description">
+                    <h1><b>Report Description</b></h1>
+                </label>
+                <textarea name="message" rows="15" cols="60" maxlength="500" required>Give a brief Narration of your report.</textarea><br><br>
+            </div>
+            <div>
+                <p id="attachment">Attach image(s) if any</p>
+                <input type="file" name="picture" accept="image/*">
+                <p id="attachment">Attach Video(s) if any</p>
+                <input type="file" name="video" accept="video/*">
+            </div>
+            <div>
+                <label><input name="submit" value="Submit" type="submit" id="submit-btn"></label>
+            </div>
+        </div>
+    </div>
+    <aside class="col-4 sd-col-12 Most-Recent-Reports ">
+        <h2>Latest Reports</h2>
+        <p>What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </aside>
+    </div>
+    <footer>
+        <p>copyright &copy; Andela Challenge 2018</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
