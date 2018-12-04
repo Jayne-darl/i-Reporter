@@ -27,17 +27,19 @@
                 <a href="allreports.html">All Report</a></div>
         </div>
     </header>
-    <div>
-        <div class="col-8 sd-col-12 addreport-desc">
-            <article>
-                <p>Please add a report as correctly as possible with images or video to support your claim if possible.
-                    A
-                    <b>red
-                        flag</b> refers an incident linked to corruption while an <b>intervention</b> is a call for
-                    government
-                    agency to intervene with respect to bad or detoriated infrastructure.</p>
-            </article>
 
+    <div class="col-1 sd-col-12"></div>
+    <div class="col-10 sd-col-12 addreport-desc">
+        <article>
+            <p>Please add a report as correctly as possible with images or video to support your claim if possible.
+                A
+                <b>red
+                    flag</b> refers an incident linked to corruption while an <b>intervention</b> is a call for
+                government
+                agency to intervene with respect to bad or detoriated infrastructure.</p>
+        </article>
+
+        <form class="add-report-form">
             <div>
                 <label class="label" for="report type"><b>Report Type</b></label>
                 <select class="addreport-dropdown" name="Report Type" required>
@@ -46,40 +48,28 @@
                 </select><br><br>
             </div>
             <div class="date">
-                <label class="label" for="date"><b>Date</b></label>
-                <input type="datetime" placeholder="Enter date" required>
+                <label class="label " for="date"><b>Date</b></label>
+                <input type="datetime" placeholder="Enter date" required><br><br>
             </div>
             <div class="location">
                 <label class="label" for="geolocation"><b>Geolocation</b></label>
-                <input name="geolocation" type="text" placeholder="Geolocation Cordinates" required><br>
+                <input name="geolocation" type="text" placeholder="Geolocation Cordinates" required><br><br>
             </div>
             <div>
-                <label for="report description">
-                    <h1><b>Report Description</b></h1>
+                <label class="label report-form" for="report description">
+                    <b>Report Description</b>
                 </label>
-                <textarea name="message" rows="15" cols="60" maxlength="500" required>Give a brief Narration of your report.</textarea><br><br>
+                <textarea name="message" rows="15" cols="60" maxlength="500" class="textarea" required>Give a brief Narration of your report.</textarea><br><br>
             </div>
             <div>
-                <p id="attachment">Attach image(s) if any</p>
-                <input type="file" name="picture" accept="image/*">
-                <p id="attachment">Attach Video(s) if any</p>
-                <input type="file" name="video" accept="video/*">
+                <label for="media" id="attachment"><b>Attach image(s) / video(s) if any</b></label><br>
+                <input type="file" name="picture" accept="image/*" multiple>
             </div>
             <div>
                 <label><input name="submit" value="Submit" type="submit" id="submit-btn"></label>
             </div>
-        </div>
-    </div>
-    <aside class="col-4 sd-col-12 Most-Recent-Reports ">
-        <h2>Latest Reports</h2>
-        <p>What is Lorem Ipsum?
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </aside>
+        </form>
+        <div class="col-1 sd-col-12"></div>
     </div>
     <footer>
         <p>copyright &copy; Andela Challenge 2018</p>
