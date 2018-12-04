@@ -22,21 +22,22 @@
             <div>
                 <div class="col-4 sd-col-12 topnav">
                     <a href="userdashboard.html">Home</a></div>
+                <div class="col-4 sd-col-12 topnav"> <a href="addreport.html">Add Report</a></div>
                 <div class="col-4 sd-col-12 topnav">
                     <a class="current" href="allreports.html">All Report</a></div>
-                <div class="col-4 sd-col-12 topnav">
-                    <select name=" Status" class="status-dropdown" required>
-                        <option value="new" selected disabled>Report Type</option>
-                        <option value="new">Red Flag</option><br>
-                        <option value="under investigation">Intervention</option><br>
-                    </select>
-                </div>
+
             </div>
+        </div>
     </header>
 
     <div class="sidenav col-3 sd-col-4">
         <ul>
-            </li>
+            <select name=" Status" class="status-dropdown" required>
+                <option value="new" selected disabled>Report Type</option>
+                <option value="new">Red Flag</option><br>
+                <option value="under investigation">Intervention</option>
+            </select>
+
             <li><a href="#all">All Report</a></li>
             <li><a href="#resolved">Resolved Report</a></li>
             <li><a href="#rejected">Rejected Report</a></li>

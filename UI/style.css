@@ -125,7 +125,10 @@ border-radius: 4px;
     line-height: 30px;
     
 }
-  .addreport-desc input[type=submit],form input[type=checkbox]{
+.textarea{
+    width: 100%
+}
+  form input[type=checkbox]{
     float: left;
     
 }
@@ -141,6 +144,14 @@ border-radius: 4px;
     border:2px solid #f0dbe1;
     border-radius: 5px;
 }
+.sign-form{
+    min-height: 60%;
+}
+.add-report-form{
+border:2px solid gray;
+padding: 20px;
+}
+
 .addreport-dropdown,input[type=datetime],.status-dropdown,input[type=text],input[type=text], input[type=password], input[type=email], input[type=number] {
     padding: 12px 20px;
     margin: 0 0 8px;
@@ -149,11 +160,12 @@ border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
 }
-.addreport-desc input[type=text]{
-    width: 50%;
-}
-input[type=text], input[type=password], input[type=email], input[type=number]{
+
+.addreport-desc input[type=text],input[type=datetime],.addreport-dropdown,input[type=text], input[type=password], input[type=email], input[type=number]{
     width: 100%;
+}
+[type=datetime]{
+    margin-bottom: 20px;
 }
 .btn:hover, .logout:hover, input[type=submit]:hover{
     background-color:#62ABE8; 
@@ -197,7 +209,7 @@ a{
     float: right;
 }
 .status-dropdown{
-    margin-left: 130px;
+    /* margin-left: 130px; */
     margin-top:0;
 } 
 .sidenav{
@@ -239,11 +251,7 @@ a{
     border: 1px solid gray;
     /* box-sizing: inherit; */
 }
-.date{
-    padding-left:70px; 
-    padding-top: 0;
-    
-} 
+
  input[type=file]{
     padding-top: 0;
     margin: 0 0 8px;
@@ -284,6 +292,11 @@ footer{
 footer p{
     padding: 0px;
     text-align: center;
+}
+.errorfooter{
+    position:absolute;
+    bottom:0;
+    width:100%;
 }
 
 .sd-col-1 {width: 8.33%;}
@@ -329,4 +342,9 @@ footer p{
     .sidenav li{
         margin-right: 10px;
     }
+    .add-report-form{
+        margin-left: 120px;
+        margin-right:100px;
+    }
 }
+  
