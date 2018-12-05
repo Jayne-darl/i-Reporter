@@ -1,26 +1,46 @@
-import moment from 'moment';
-import uuid from 'uuid';
+import faker from 'faker';
 
-class Report {
-    constructor() {
-        this.reports = [];
-    }
-    create(record) {
-        const newReport = {
-            id: uuid.v4(),
-            createdAt: moment.now(),
-            createdBy: record.id,
-            type: record.type || '',
-            location: record.location || '',
-            status: record.status || '',
-            images: record.images || '',
-            videos: record.videos || '',
-            comment: record.comment || '',
-            updatedAt: moment.now()
-        };
-        this.reports.push(newReport);
-        return newReport;
-    }
-}
+const reportRecord = [
+    {
+        id: 1,
+        createdOn: new Date(),
+        createdBy: faker.name.findName(),
+        type: "red flag",
+        location: `${faker.address.longitude()}, ${faker.address.lattitude}}`,
+        status: "rejected",
+        images: [faker.image.avatar()],
+        videos: [],
+        comment: faker.lorem.sentences,
+        updatedAt: new Date(),
+    },
 
-module.exports = new Report();
+    {
+        id: 2,
+        createdOn: new Date(),
+        createdBy: faker.name.findName(),
+        type: "red flag",
+        location: `${faker.address.longitude()}, ${faker.address.lattitude}}`,
+        status: "rejected",
+        images: [faker.image.avatar()],
+        videos: [],
+        comment: faker.lorem.sentences,
+        updatedAt: new Date(),
+    },
+
+    {
+        id: 3,
+        createdOn: new Date(),
+        createdBy: faker.name.findName(),
+        type: "red flag",
+        location: `${faker.address.longitude()}, ${faker.address.lattitude}}`,
+        status: "rejected",
+        images: [faker.image.avatar()],
+        videos: [],
+        comment: faker.lorem.sentences,
+        updatedAt: new Date(),
+    },
+]
+
+
+
+export default reportRecord;
