@@ -1,46 +1,25 @@
-import faker from 'faker';
+import db from './mockdb';
 
-const reportRecord = [
-    {
-        id: 1,
-        createdOn: new Date(),
-        createdBy: faker.name.findName(),
-        type: "red flag",
-        location: `${faker.address.longitude()}, ${faker.address.lattitude}}`,
-        status: "rejected",
-        images: [faker.image.avatar()],
-        videos: [],
-        comment: faker.lorem.sentences,
-        updatedAt: new Date(),
-    },
+class Report {
+    constructor(attr) {
+        Report.count += 1;
+        this.id = Report.count;
+        this.type = attr.type;
+        this.location = atrr.location;
+        this.image = attr.image;
+        this.video = attr.video;
+        this.comment = attr.comment;
+    }
+    static create(attr) {
+        const redFlag = new Report(attr);
+        Report.table.push(redFlag);
+        return redFlag;
+    }
+    static all() {
+        return Report.table;
+    }
+}
+Report.table = db.reportRecord;
+Report.count = db.reportRecord.length;
 
-    {
-        id: 2,
-        createdOn: new Date(),
-        createdBy: faker.name.findName(),
-        type: "red flag",
-        location: `${faker.address.longitude()}, ${faker.address.lattitude}}`,
-        status: "rejected",
-        images: [faker.image.avatar()],
-        videos: [],
-        comment: faker.lorem.sentences,
-        updatedAt: new Date(),
-    },
-
-    {
-        id: 3,
-        createdOn: new Date(),
-        createdBy: faker.name.findName(),
-        type: "red flag",
-        location: `${faker.address.longitude()}, ${faker.address.lattitude}}`,
-        status: "rejected",
-        images: [faker.image.avatar()],
-        videos: [],
-        comment: faker.lorem.sentences,
-        updatedAt: new Date(),
-    },
-]
-
-
-
-export default reportRecord;
+export default Report;
