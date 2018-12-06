@@ -1,9 +1,12 @@
 import express from 'express';
 // import path from 'path';
-import Report from '../controllers/report-controller';
+import postQuestion from '../controllers/PostQuestions';
+import getAllQuestions from '../controllers/getAllQuestions';
 
 const routes = express.Router();
 
 
-routes.post('/api/v1/reports', Report.create);
+routes.post('/api/v1/reports', postQuestion);
+routes.get('api/v1/reports', getAllQuestions);
+
 export default routes;

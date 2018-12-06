@@ -22,7 +22,7 @@ describe('API endpoints /reports', () => {
                 res.should.have.status(201);
                 res.should.be.json;
                 res.body.should.be.a('Object');
-                res.body.should.have.property('Success');
+                res.body.should.have.property('message');
                 done();
             });
     });
