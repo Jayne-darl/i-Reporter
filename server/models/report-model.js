@@ -25,6 +25,12 @@ class Report {
         const report = Report.table.filter(report => report.id === id);
         Report.table = report;
         return Report.table;
+    }
+    static updateByLocation(id, data) {
+        const report = this.findById(id);
+        const index = Report.table.indexOf(report);
+        Report.table[index].location = data['location'] || Report.location;
+        return Report.table[index];
 
     }
 }

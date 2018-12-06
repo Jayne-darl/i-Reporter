@@ -5,7 +5,8 @@ const deleteReport = (req, res, next) => {
     if (report = Report.removeById(reportId)) {
         return res.json({
             status: 200,
-            data: [report],
+            id: reportId,
+            message: "red flag has been deleted",
         });
     }
     return res.json({
