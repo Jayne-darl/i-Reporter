@@ -1,6 +1,6 @@
 import Report from '../models/report-model';
 
-const updateLocation = (req, res, next) => {
+const updateComment = (req, res, next) => {
     const reportId = Report.findById(req.params.id);
     if (!reportId) {
         return res.json({
@@ -14,11 +14,11 @@ const updateLocation = (req, res, next) => {
         data: [
             {
                 id: updatedReport.id,
-                message: "updated red flag's location",
+                message: "updated red flag's Comment",
 
             }
         ]
     })
 }
 
-export default updateLocation;
+export default updateComment;
