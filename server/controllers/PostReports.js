@@ -1,6 +1,6 @@
 import Report from '../models/report-model';
 
-const postQuestion = (req, res, next) => {
+const postReport = (req, res, next) => {
     if (!req.body.type || !req.body.location || !req.body.comment) {
         return res.json({ status: 400, Error: 'Fill in the required fields' })
     }
@@ -22,4 +22,4 @@ const postQuestion = (req, res, next) => {
 }
 
 
-export default postQuestion;
+export default postReport;
