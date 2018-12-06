@@ -2,10 +2,12 @@ import Report from '../models/report-model';
 
 const deleteReport = (req, res, next) => {
     const reportId = parseInt(req.params.id, 10);
-    if (report = Report.removeById(reportId)) {
+    const report = Report.removeById(reportId)
+    if (report) {
         return res.json({
             status: 200,
-            data: [report],
+            id: reportId,
+            message: "red flag has been deleted",
         });
     }
     return res.json({
