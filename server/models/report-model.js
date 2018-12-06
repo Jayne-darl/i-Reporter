@@ -21,6 +21,12 @@ class Report {
     static findById(id) {
         return Report.table.find(report => report.id === id);
     }
+    static removeById(id) {
+        const report = Report.table.filter(report => report.id === id);
+        Report.table = report;
+        return Report.table;
+
+    }
 }
 Report.table = db.reportRecord;
 Report.count = db.reportRecord.length;

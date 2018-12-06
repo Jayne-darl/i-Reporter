@@ -8,9 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 //app.use(express.json())
-app.use('', routes);
 
-// import Report from './controllers/report-controller';
-// app.post('/api/v1/reports', Report.create);
+app.use('', routes);
 
 export default app;
