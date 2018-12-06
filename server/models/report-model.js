@@ -18,6 +18,9 @@ class Report {
     static all() {
         return Report.table;
     }
+    static findById(id) {
+        return Report.table.find(report => report.id === id);
+    }
 }
 Report.table = db.reportRecord;
 Report.count = db.reportRecord.length;
