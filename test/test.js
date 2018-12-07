@@ -2,13 +2,13 @@ import chai from "chai";
 import ChaiHttp from 'chai-http';
 import app from '../server/app';
 
-
-import 'chai/register-should';
+chai.should();
+// import 'chai/register-should';
 chai.use(ChaiHttp);
 
 describe('API endpoints /reports', () => {
 
-    it('should return 201: (Created successfully) for POST /report', (done) => {
+    it('should return 201: (Created red flag) for POST /report', (done) => {
         const values = {
 
             "type": "intervention",
