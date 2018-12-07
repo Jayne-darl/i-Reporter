@@ -6,11 +6,13 @@
   "scripts": {
     "start": "babel-node server/index.js",
     "devstart": "nodemon server/index.js --exec babel-node",
+    "build": "babel server -d dist",
     "test": "nyc mocha --timeout=3000 --exit --require babel-register test --exec",
     "test-nyc": "mocha test --require babel-register --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "start-build": "node dist/index.js",
     "lint": "eslint --fix server/app.js data server",
-    "eslint-test": "eslint --fix test config.js .eslintrc.js"
+    "eslint-test": "eslint --fix test config-heroku.js .eslintrc.js"
   },
   "repository": {
     "type": "git",
