@@ -5,19 +5,19 @@ const ReportController = {
     create(req, res, next) {
         const record = req.body;
         if (!record.type || !record.location || !record.comment) {
-            return res.json({ status: 400, Error: 'Fill in the required fields' });
+            return res.status(400).json({ status: 400, Error: 'Fill in the required fields' });
         }
         else if (typeof record.type !== "string" || typeof record.location !== "string" || typeof record.comment !== "string") {
-            return res.json({ status: 400, Error: 'Invalid content type' });
+            return res.status(400).json({ status: 400, Error: 'Invalid content type' });
         }
 
         const newReport = Report.create(record);
-        return res.json({
+        return res.status(201).json({
             Status: 201,
             data: [
                 {
                     id: newReport.id,
-                    message: 'created red flag'
+                    Message: 'created red flag'
                 }
             ]
         });
@@ -25,7 +25,7 @@ const ReportController = {
 
     getAll(req, res, next) {
         const reports = Report.all();
-        return res.json({
+        return res.status(200).json({
             status: 200,
             data: reports,
         });
@@ -33,17 +33,19 @@ const ReportController = {
 
     getOne(req, res, next) {
         const reportId = parseInt(req.params.id, 10);
-        const report = Report.findById(reportId);
-        if (report) {
-            return res.json({
-                status: 200,
-                data: [report],
+
+        if (isNaN(reportId)) {
+            return res.status(404).json({
+                status: 404,
+                message: "Not found",
             });
         }
+        const report = Report.findById(reportId);
         return res.json({
-            status: 404,
-            message: "Not found",
-        })
+            status: 200,
+            data: [report],
+        });
+
 
     },
 
