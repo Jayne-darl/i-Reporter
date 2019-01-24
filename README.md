@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Jayne-darl/i-Reporter.svg?branch=develop)](https://travis-ci.org/Jayne-darl/i-Reporter)
 # i-REPORTER
 
 A platform for reporting corruption cases or anything that need government intervention.
